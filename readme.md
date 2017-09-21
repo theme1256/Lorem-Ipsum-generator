@@ -1,6 +1,21 @@
-# Lynda Downloader
+# Lorem Ipsum generator
 
-1. Hent repo
-2. Gå ind i extensions i chrome
-3. Tryk "load unpacked extension..."
-4. Vælg mappen hvor repo er pakket ud
+A, somewhat, simple plugin for Google Chrome.  
+It performs the simple task of generating Lorem Ipsum text, but a lot of different kinds of Lorem Ipsum texts, a list is available later on this site.
+
+## Roadmap
+
+- [ ] Fetch data from a website
+- [ ] Save text to clipboard
+- [ ] Save preferences
+- [ ] Rightclick to insert into textarea or input, based on preference
+- [ ] Shorthand command, converted to lorem ipsum text, based on preference
+
+## Lorem Ipsum versions
+
+* Regular Lorem Ipsum
+
+### Not imented yet
+
+* Trump Ipsum [http://trumpipsum.net/](http://trumpipsum.net/)
+* Everything from Meet the Ipsums [http://meettheipsums.com/](http://meettheipsums.com/)
