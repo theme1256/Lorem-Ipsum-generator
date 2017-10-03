@@ -3,7 +3,7 @@
 
   "name": "Lorem Ipsum generator",
   "description": "This extention generates different kinds of Lorem Ipsum placeholder texts at different lengths.",
-  "version": "0.1",
+  "version": "0.3",
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
 
   "browser_action": {
@@ -12,9 +12,9 @@
   },
 
   "permissions": [
-    "activeTab",
-    "downloads",
-    "http://trumpipsum.net/"
+    "clipboardWrite",
+    "http://trumpipsum.net/*",
+    "http://www.lipsum.com/feed/html"
   ],
   "web_accessible_resources": [
     "assets/css/*.*",

@@ -5,8 +5,8 @@ It performs the simple task of generating Lorem Ipsum text, but a lot of differe
 
 ## Roadmap
 
-- [ ] Fetch data from a website
-- [ ] Save text to clipboard
+- [x] Fetch data from a website
+- [x] Save text to clipboard
 - [ ] Save preferences
 - [ ] Rightclick to insert into textarea or input, based on preference
 - [ ] Shorthand command, converted to lorem ipsum text, based on preference
