@@ -8,7 +8,7 @@ It performs the simple task of generating Lorem Ipsum text, but a lot of differe
 - [x] Fetch data from a website
 - [x] Save text to clipboard
 - [x] Save preferences
-- [ ] Rightclick to insert into textarea or input, based on preference
+- [x] Rightclick to insert into textarea or input, based on preference
 - [ ] Shorthand command, converted to lorem ipsum text, based on preference
 
 ## Lorem Ipsum versions
@@ -16,7 +16,8 @@ It performs the simple task of generating Lorem Ipsum text, but a lot of differe
 * Lorem Ipsum [http://www.lipsum.com/](http://www.lipsum.com/)
 * Trump Ipsum [http://trumpipsum.net/](http://trumpipsum.net/)
 * Lorem Fucking Ipsum [http://loremfuckingipsum.com/](http://loremfuckingipsum.com/)
+* Samuel L. Ipsum [http://slipsum.com/](http://slipsum.com/)
 
-### Not imented yet
+### Not implemented yet
 
 * Everything from Meet the Ipsums [http://meettheipsums.com/](http://meettheipsums.com/)
