@@ -16,6 +16,18 @@ function download(file){
 	});
 }
 
+function loadSite(url, _callback){
+	var req = new XMLHttpRequest();
+	req.open("GET", url, true);
+    req.onload = function(e){
+    	var data = this.response;
+    	var target = $("#hidden");
+    	target.html(data);
+    	_callback();
+	};
+    req.send();
+}
+
 chrome.runtime.onMessage.addListener(function(request, sender){
 });
 
