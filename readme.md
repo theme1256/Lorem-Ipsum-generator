@@ -7,7 +7,7 @@ It performs the simple task of generating Lorem Ipsum text, but a lot of differe
 
 - [x] Fetch data from a website
 - [x] Save text to clipboard
-- [ ] Save preferences
+- [x] Save preferences
 - [ ] Rightclick to insert into textarea or input, based on preference
 - [ ] Shorthand command, converted to lorem ipsum text, based on preference
 

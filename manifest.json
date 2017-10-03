@@ -12,6 +12,7 @@
   },
 
   "permissions": [
+    "storage",
     "clipboardWrite",
     "http://trumpipsum.net/*",
     "http://www.lipsum.com/feed/html"

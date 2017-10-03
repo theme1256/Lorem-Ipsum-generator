@@ -108,8 +108,33 @@ $(function(){
 			});
 		}
 	});
+	$("#ipsum-type").change(function(){
+		var v = $(this).val();
+		console.log(v);
+		chrome.storage.sync.set({'ipsum_type': v}, function() {
+			// Notify that we saved.
+			console.log('Settings saved');
+		});
+	});
+	$("#ipsum-amount").change(function(){
+		var v = $(this).val();
+		console.log(v);
+		chrome.storage.sync.set({'ipsum_amount': v}, function() {
+			// Notify that we saved.
+			console.log('Settings saved');
+		});
+	});
 });
 
 window.onload = onWindowLoad;
 function onWindowLoad(){
+	chrome.storage.sync.get(["ipsum_type", "ipsum_amount"], function(d){
+		console.log(d);
+		if(d.ipsum_type.length > 0){
+			$("#ipsum-type").val(d.ipsum_type);
+		}
+		if(d.ipsum_amount.length > 0){
+			$("#ipsum-amount").val(d.ipsum_amount);
+		}
+	})
 }
