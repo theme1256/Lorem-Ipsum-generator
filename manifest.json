@@ -13,6 +13,14 @@
 
   "permissions": [
     "activeTab",
-    "downloads"
+    "downloads",
+    "http://trumpipsum.net/"
+  ],
+  "web_accessible_resources": [
+    "assets/css/*.*",
+    "assets/fonts/*.*",
+    "*.png",
+    "*.css",
+    "*.ttf"
   ]
 }
