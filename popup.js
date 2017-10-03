@@ -106,6 +106,13 @@ $(function(){
 				out(clean(ipsum));
 				target.html("");
 			});
+		} else if(type == "loremfuckingipsum"){
+			loadSitePost("http://loremfuckingipsum.com/text.php", function(data){
+				target.html(data[20]);
+				var ipsum = target.find("#text-to-copy").html();
+				out(clean(ipsum));
+				target.html("");
+			}, "number-copy="+amount+"&copy=Paragraphs");
 		}
 	});
 	$("#ipsum-type").change(function(){

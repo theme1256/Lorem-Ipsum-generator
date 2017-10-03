@@ -13,9 +13,10 @@ It performs the simple task of generating Lorem Ipsum text, but a lot of differe
 
 ## Lorem Ipsum versions
 
-* Regular Lorem Ipsum
+* Lorem Ipsum [http://www.lipsum.com/](http://www.lipsum.com/)
+* Trump Ipsum [http://trumpipsum.net/](http://trumpipsum.net/)
+* Lorem Fucking Ipsum [http://loremfuckingipsum.com/](http://loremfuckingipsum.com/)
 
 ### Not imented yet
 
-* Trump Ipsum [http://trumpipsum.net/](http://trumpipsum.net/)
 * Everything from Meet the Ipsums [http://meettheipsums.com/](http://meettheipsums.com/)
