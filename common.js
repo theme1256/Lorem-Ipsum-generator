@@ -1,3 +1,8 @@
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.split(search).join(replacement);
+};
+
 // Strips the string from different html tags and adds linebreaks after each paragraph
 function clean(text){
 	var tmp = text;
