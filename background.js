@@ -57,4 +57,14 @@ function onWindowLoad(){
     }, function(){
         chrome.tabs.executeScript(null, {file: 'ipsumJS.js'});
     });
+	chrome.storage.sync.get(["ipsum_type"], function(d){
+		if(d.ipsum_type.length == 0){
+			chrome.storage.sync.set({'ipsum_type': "loremipsum"}, function(){});
+		}
+	});
+	chrome.storage.sync.get(["ipsum_amount"], function(d){
+		if(d.ipsum_amount.length == 0){
+			chrome.storage.sync.set({'ipsum_amount': 5}, function(){});
+		}
+	});
 }

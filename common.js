@@ -73,6 +73,12 @@ function generateIpsum(amount, type, _return){
 			target.html("");
 			_return(clean(ipsum));
 		}, "number-copy="+amount+"&copy=Paragraphs");
+	} else if(type == "coffeeipsum"){
+		loadSitePost("http://coffeeipsum.com/", function(data){
+			target.html(data[5].innerHTML.replaceAll("<script", "<code").replaceAll("/script>", "/code>").replaceAll("<iframe", "<code").replaceAll("/iframe>", "/code>"));
+			var ipsum = target.find("#tbCopy1").val();
+			_return(ipsum);
+		}, "ScriptManager1=upIpsum%7ClbGenIpsum&__EVENTTARGET=lbGenIpsum&__EVENTARGUMENT=&__VIEWSTATE=%2FwEPDwUKMTEwNTA3NTAwMmRkHanO2mttY4qbsDw1aUM6Fxxo2fvwSMLfs%2B6SLNHjh%2Bk%3D&__VIEWSTATEGENERATOR=CA0B0334&__EVENTVALIDATION=%2FwEdAAhkgYAXqKuOtMXhmrZrIJklOwusCvugYaHCVIdJGFx5wQPfUKwML5F89RbmmgXsHgdrIHOpintv4a7OxKiN%2B4lXIQ2vPVDDVUlWOH1JOEy5EZjVKYmGFnjWX7PVM9lma0%2Fqc64K%2BPprGJ1ZJxp452qqGppHg87bdIXHF%2BHGdXyS6uwG8uX4G%2FWRU%2FBUnjU3cF0qDGqpmEGh1gi5WX9lz4ih&hfPage=0&hfLastValue=0&tbCopy1=&tbCopy2=&paraNum="+amount+"&paraSize=Normal&__ASYNCPOST=true&");
 	} else if(type == "samuellipsum"){
 		var ipsum = samuellipsum(amount);
 		_return(ipsum);

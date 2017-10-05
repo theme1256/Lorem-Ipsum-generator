@@ -22,10 +22,10 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 
 		if(request.target_id.length > 0)
 			document.getElementById(request.target_id).value = text;
-		else if(request.target_name.length > 0)
-			var els = document.getElementsByName(request.target_name)[0].value = text;
 		else if(request.target_class.length > 0)
 			document.getElementsByClassName(request.target_class).value = text;
+		else if(request.target_name.length > 0)
+			document.getElementsByName(request.target_name)[0].value = text;
 		else
 			document.getElementsByTagName(request.target)[0].value = text;
 
