@@ -36,6 +36,26 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 		chrome.storage.local.set({'ipsum_target_class': request.target_class}, function(){});
 		sendResponse(request);
 	}
+	if(request.action == "getIpsum"){
+		chrome.storage.sync.get(["ipsum_type", "ipsum_amount"], function(d){
+			if(d.ipsum_type.length == 0)
+				type = "loremipsum";
+			else
+				type = d.ipsum_type;
+			if(d.ipsum_amount.length == 0)
+				amount = 5;
+			else
+				amount = d.ipsum_amount;
+
+			generateIpsum(amount, type, function(ipsum){
+				R = {};
+				R.type = type;
+				R.amount = amount;
+				R.text = ipsum;
+				sendResponse(R);
+			});
+		});
+	}
 });
 
 

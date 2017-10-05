@@ -32,3 +32,100 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
 		sendResponse(request);
 	}
 });
+
+document.addEventListener("keydown", function(e){
+	var key = e.keyCode;
+	var className = e.srcElement.className;
+	var id = e.srcElement.id;
+	var tag = e.srcElement.localName.toLowerCase();
+	var name = e.srcElement.name;
+	var type = e.srcElement.type;
+	var content = "";
+
+	if(key == 9){
+		if(tag == "input"){
+			console.log("input!");
+			if(id.length > 0)
+				content = document.getElementById(id).value;
+			else if(className.length > 0)
+				content = document.getElementsByClassName(className).value;
+			else if(name.length > 0)
+				content = document.getElementsByName(name)[0].value;
+			else
+				content = document.getElementsByTagName(type)[0].value;
+			
+			if(content.length > 0){
+				var test = content.split("#");
+				if(test.length > 2){
+					// There might be something here
+					for(var i = 0; i < test.length; i++){
+						if(test[i].toLowerCase() == "ipsum"){
+							chrome.runtime.sendMessage({
+								action: "getIpsum"
+							}, function(response){
+								console.log(response);
+								test[i] = response.text;
+							});
+						}
+						if(i == test.length){
+							if(id.length > 0)
+								document.getElementById(id).value = test.join(" ");
+							else if(className.length > 0)
+								document.getElementsByClassName(className).value = test.join(" ");
+							else if(name.length > 0)
+								document.getElementsByName(name)[0].value = test.join(" ");
+							else
+								document.getElementsByTagName(type)[0].value = test.join(" ");
+						}
+					}
+				} else{
+					console.log("Not enough #'s");
+				}
+			} else{
+				console.log("No content");
+			}
+		} else if(tag == "textarea"){
+			console.log("textarea!");
+			if(id.length > 0)
+				content = document.getElementById(id).value;
+			else if(className.length > 0)
+				content = document.getElementsByClassName(className).value;
+			else if(name.length > 0)
+				content = document.getElementsByName(name)[0].value;
+			else
+				content = document.getElementsByTagName(type)[0].value;
+			
+			if(content.length > 0){
+				var test = content.split("#");
+				if(test.length > 2){
+					e.preventDefault();
+					// There might be something here
+					for(var i = 0; i < test.length; i++){
+						if(test[i].toLowerCase() == "ipsum"){
+							chrome.runtime.sendMessage({
+								action: "getIpsum"
+							}, function(response){
+								console.log(response);
+								test[i] = response;
+							});
+						}
+						if(i == test.length){
+							if(id.length > 0)
+								document.getElementById(id).value = test.join(" ");
+							else if(className.length > 0)
+								document.getElementsByClassName(className).value = test.join(" ");
+							else if(name.length > 0)
+								document.getElementsByName(name)[0].value = test.join(" ");
+							else
+								document.getElementsByTagName(type)[0].value = test.join(" ");
+						}
+					}
+				} else{
+					console.log("Not enough #'s");
+				}
+			} else{
+				console.log("No content");
+			}
+		}
+	}
+});
