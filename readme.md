@@ -17,6 +17,7 @@ It performs the simple task of generating Lorem Ipsum text, but a lot of differe
 * Trump Ipsum [http://trumpipsum.net/](http://trumpipsum.net/)
 * Lorem Fucking Ipsum [http://loremfuckingipsum.com/](http://loremfuckingipsum.com/)
 * Samuel L. Ipsum [http://slipsum.com/](http://slipsum.com/)
+* Coffee Ipsum [http://coffeeipsum.com/](http://coffeeipsum.com/)
 
 ### Not implemented yet
 
